@@ -9,30 +9,36 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
 
         <TextView
             android:id="@+id/text_view_p1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="player 1: 0"
-            android:textSize="30sp" />
+            android:accessibilityHeading="false"
+            android:text="Player 1: 0"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_purple"/>
+
 
         <TextView
             android:id="@+id/text_view_p2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_view_p1"
-            android:text="player 2: 0"
-            android:textSize="30sp" />
+            android:text="Player 2: 0"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_purple"/>
 
         <Button
             android:id="@+id/button_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="155dp"
+            android:layout_height="59dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="100dp"
-            android:text="reset" />
+            android:layout_marginEnd="53dp"
+            android:text="reset"
+            tools:background="@drawable/ic_launcher_background" />
 
 
     </RelativeLayout>
@@ -47,24 +53,30 @@
            android:layout_width="0dp"
            android:layout_height="match_parent"
            android:layout_weight="1"
-           android:textSize="60sp"
-           />
+           android:background="@drawable/gg"
+
+           android:textColor="@color/colorAccent"
+           android:textSize="60sp" />
 
        <Button
            android:id="@+id/button_01"
            android:layout_width="0dp"
            android:layout_height="match_parent"
            android:layout_weight="1"
-           android:textSize="60sp"
-           />
+           android:background="@drawable/gg"
+
+           android:textColor="@color/colorPrimaryDark"
+           android:textSize="60sp" />
 
        <Button
            android:id="@+id/button_02"
            android:layout_width="0dp"
            android:layout_height="match_parent"
            android:layout_weight="1"
-           android:textSize="60sp"
-           />
+           android:background="@drawable/gg"
+
+           android:textColor="@color/colorAccent"
+           android:textSize="60sp" />
 
    </LinearLayout>
 
@@ -78,24 +90,30 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"
-            />
+            android:background="@drawable/gg"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:textSize="60sp" />
 
         <Button
             android:id="@+id/button_11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"
-            />
+            android:background="@drawable/gg"
+            android:textColor="@color/colorAccent"
+
+            android:textSize="60sp" />
 
         <Button
             android:id="@+id/button_12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"
-            />
+            android:background="@drawable/gg"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:textSize="60sp" />
 
     </LinearLayout>
 
@@ -109,24 +127,27 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"
-            />
+            android:background="@drawable/gg"
+            android:textColor="@color/colorAccent"
+            android:textSize="60sp" />
 
         <Button
             android:id="@+id/button_21"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"
-            />
+            android:background="@drawable/gg"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="60sp" />
 
         <Button
             android:id="@+id/button_22"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"
-            />
+            android:background="@drawable/gg"
+            android:textColor="@color/colorAccent"
+            android:textSize="60sp" />
 
     </LinearLayout>
 

@@ -1,5 +1,7 @@
 package com.example.assignment3;
 
+import android.media.MediaPlayer;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,10 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final MediaPlayer resetsound = MediaPlayer.create(this, R.raw.reset);
+        final MediaPlayer cheersound = MediaPlayer.create(this, R.raw.cheer);
+
 
         textViewPlayer1 = findViewById(R.id.text_view_p1);
         textViewPlayer2 = findViewById(R.id.text_view_p2);
@@ -43,11 +50,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              resetsound.start();
+
+                resetGame();
 
             }
         });
 
+
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -89,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     && field[i][0].equals(field[i][2])
                     && !field[i][0].equals("")){
                 return true;
+
             }
         }
 
@@ -107,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (field[0][2].equals(field[1][1])
-                && field[0][2].equals(field[2][2])
+                && field[0][2].equals(field[2][0])
                 && !field[0][2].equals("")){
             return true;
         }
@@ -123,6 +137,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Cheers! Player 1 wins!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
+
+
     }
 
     private void player2Wins(){
@@ -155,4 +171,13 @@ resetBoard();
         roundCount = 0;
         player1Turn = true;
     }
+
+    private void resetGame(){
+        player1points=0;
+        player2points=0;
+        updatePointsText();
+        resetBoard();
+    }
+
+
 }
